@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <style>
+        .body {
+            background-color: gray;
+
+        }
+        #result {
+            color: orangered ;
+
+        }
+         .container {
+            color: black;
+            width: 420px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid blue;
+         }
+         .quiz-app{
+            color: orange;
+            text-align: center;
+         }
+
+    </style>
+   
+  </head>
+  <body class="body">
+    <div class="container">
+        <h2 class="quiz-app">quiz app</h2>
+        <form id="quizForm">
+           <div class="card">
+    <div>
+        what is the capital of india?
+    </div>
+    <label>
+        <input type="radio" name="q1" value="Delhi"/> Delhi
+    </label>
+    <label>
+        <input type="radio" name="q1" value="Mumbai"/> Mumbai
+    </label>
+    <label>
+        <input type="radio" name="q1" value="Kolkata"/> Kolkata
+    </label>
+    <label>
+        <input type="radio" name="q1" value="goa"/> Goa
+    </label>
+</div>
+
+<div class="card">
+    <div>
+        which language used for web development?
+    </div>
+    <label>
+        <input type="radio" name="q2" value="python"/> Python
+    </label>
+    <label>
+        <input type="radio" name="q2" value="java"/> Java
+    </label>
+    <label>
+        <input type="radio" name="q2" value="javascript"/> JavaScript
+    </label>
+    <label>
+        <input type="radio" name="q2" value="c++"/> C++
+    </label>
+</div>
+
+<div class="card">
+    <div>
+        who is the pm of india?
+    </div>
+    <label>
+        <input type="radio" name="q3" value="modi"/> Modi
+    </label>
+    <label>
+        <input type="radio" name="q3" value="yogi"/> Yogi
+    </label>
+    <label>
+        <input type="radio" name="q3" value="rahul"/> Rahul
+    </label>
+    <label>
+        <input type="radio" name="q3" value="gandhi"/> Gandhi
+    </label>
+</div>
+
+<div class="card">
+    <div>
+        how many day in a week?
+    </div>
+    <label>
+        <input type="radio" name="q4" value="seven"/> Seven
+    </label>
+    <label>
+        <input type="radio" name="q4" value="two"/> Two
+    </label>
+    <label>
+        <input type="radio" name="q4" value="one"/> One
+    </label>
+    <label>
+        <input type="radio" name="q4" value="five"/> Five
+    </label>
+</div>
+
+            
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+        <div id="result">result</div>
+    </div>
+  </body>
+
+  <script>
+    
+    const correctAns={
+        q1:'Delhi',
+        q2:'javascript',
+        q3:'modi',
+        q4:'seven'
+    }
+    const quizForm= document.getElementById('quizForm');
+
+    const result=document.getElementById('result');
+
+    quizForm.addEventListener('submit',(e)=>{
+        e.preventDefault();
+
+        let score=0;
+        let count=4;
+
+        for(let key in correctAns){
+            const selected=document.querySelector(`input[name="${key}"]:checked`)
+            if(selected.value === correctAns[key]){
+                score++;
+            }
+        }
+
+      
+        result.style.color="green";
+        
+     
+
+          result.textContent=`your score ${score} out of ${count}`;
+    });
+  </script>
+</html>

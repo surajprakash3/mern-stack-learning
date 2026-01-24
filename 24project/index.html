@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <div>
+        <div>
+            <label>
+                number
+            </label>
+            <input type="number" id="num" placeholder="value">
+        </div>
+        <button onclick="answer()">answer</button>
+        <div>
+            <label>square</label>
+            <input type="number" id="show" placeholder="square">
+        </div>
+        <div id="res">
+          
+        </div>
+    </div>
+  </body>
+  <script>
+    <!-- function  answer(){
+      const nums=document.getElementById('num').value;
+      <!-- console.log(nums); -->
+     
+       let squ=nums*nums;
+      <!-- let a= document.createElement('div');
+      a.innerText=`square is ${squ}`;
+      let showresult= document.getElementById('res');
+      showresult.appendChild(a);  -->
+
+      document.getElementById('show').value = squ;
+
+    } -->
+    function answer() {
+    const nums = Number(document.getElementById('num').value);
+    console.log(nums);
+
+    let squ = nums * nums;
+
+    document.getElementById('show').value = squ;
+}
+
+
+  </script>
+</html>

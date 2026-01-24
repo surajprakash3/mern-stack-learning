@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Task List</title>
+</head>
+<body>
+
+    <h2>todo</h2>
+
+    <input type="text" id="tasklist" placeholder="Enter task">
+    <button onclick="addtaskfun()">Add Task</button>
+
+  <ul id="taskOutput"> </ul>
+
+    <script>
+        function addtaskfun() {
+            // get value INSIDE function
+            const tasktext = document.getElementById('tasklist').value;
+
+            if (tasktext === '') {
+                alert("Please enter a task");
+                return;
+            }
+
+            // create list item
+            const li = document.createElement("li");
+            li.innerHTML= `
+             <span>${tasktext}</span>
+             <button onclick="editFun(this)">Edit</button>
+             <button  onclick="deleteFun(this)" >delete</button>
+            `;
+            // add to list
+            document.getElementById("taskOutput").appendChild(li);
+
+            // clear input
+            document.getElementById('tasklist').value = '';
+
+        }
+            function deleteFun(btn) {
+                
+                btn.parentElement.remove();
+            }
+
+            
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Form Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header >
+    <p>Header</p>
+  </header>
+<div id="layout">
+<aside id="left">
+  <p>this is left aside</p>
+</aside>
+<main>
+  
+
+    <h1 class="h1">Box</h1>
+
+    <!-- Corner Boxes -->
+    <div class="corner-box top-left">Top Left</div>
+    <div class="corner-box top-right">Top Right</div>
+    <div class="corner-box bottom-left">Bottom Left</div>
+    <div class="corner-box bottom-right">Bottom Right</div>
+
+    <!-- Main Container -->
+    <div class="flex-box">
+
+        <!-- Form Box -->
+        <div class="form-box">
+            <h2>Form</h2>
+
+            <label>Name</label>
+            <input type="text" class="y" placeholder="Enter name">
+
+            <label>Roll No</label>
+            <input type="number" class="y" placeholder="Enter roll no">
+
+            <label>Age</label>
+            <select class="y">
+                <option>Select age</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+            </select>
+
+            <label>Gender</label>
+            <div class="inline">
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </div>
+
+            <label>Skills</label>
+            <div class="inline">
+                <input type="checkbox"> HTML
+                <input type="checkbox"> CSS
+                <input type="checkbox"> JavaScript
+            </div>
+
+            <label>Course</label>
+            <select class="y">
+                <option>Select course</option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>AI</option>
+                <option>DS</option>
+            </select>
+
+            <button>Submit</button>
+        </div>s
+                                        
+    
+
+    <!-- Table -->
+    <div>
+      <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- data will come here -->
+        </tbody>
+      </table>
+    </div>
+</div>
+</main>
+<aside id="right">
+  <p>this is right aside</p>
+</aside>
+</div>
+
+ <footer>
+    <p>Footer</p>
+  </footer>
+</body>
+</html>

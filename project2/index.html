@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="body">
+    <h1 class="h1">detail</h1>
+    <div>
+        <lable>
+            Weight
+        </lable>
+        <input type="num" id="weight" placeholder="weight" />
+        <lable>
+            Height
+        </lable>
+        <input type="num" id="height" placeholder="height"/>
+        <button ondblclick="adddata()">
+            adddata
+        </button>
+    </div>
+<table id="dataTable">
+    <thead>
+        <tr>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>bmi</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will appear here -->
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.bod{
+    background-color: gray;
+}
+.h1{
+    color:aqua;
+    text-align: center;
+}
+.divs {
+    max-width: 400px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 5px;
+}
+.bjp{
+    color: rgb(28, 14, 4);
+    
+}
+.rjd{
+    color: rgb(28, 14, 4);
+    
+}
+.ntp{
+    color: rgb(28, 14, 4);
+    
+}

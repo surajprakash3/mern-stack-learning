@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Amount</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="body">
+    <div class="container">
+        <h2 class="h2">Account Details</h2>
+        <div>
+             <div class="bal">
+                <label class="box-b">Balance: Rs: 5000</label>
+                
+            </div>
+            <div>
+                <label class="box-b">Amount:</label>
+                <input class="box-c" type="number" id="amount" placeholder="amount"/>
+            </div>
+            
+            <div class="box">
+           <main>
+            <div class="flex-box">
+               <div>
+              <button  class="btn" id="deposit" onclick="adddeposit()">Deposit</button>
+            </div>
+            <div class="btn">
+              <button  class="btn" id="withdrawal" onclick="addwithdrawal()">Withdrawal</button>
+            </div>
+            <div class="btn">
+              <button class="btn" id="getbalance" onclick="addgetbalance()">Getbalance</button>
+            </div>
+            </div>
+           </main>
+            
+            </div>
+             <div>
+                <label class="box-b"> Total balance:</label>
+                <input class="box-c" type="number" id="balance" placeholder="Total balance"/>
+            </div>
+           
+   
+        </div>
+    </div>
+    <div class="bot">
+      Fill correct Amount
+    </div>
+    <script src="script.js">
+        
+    </script>
+  </body>
+</html>

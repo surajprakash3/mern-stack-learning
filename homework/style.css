@@ -1,0 +1,147 @@
+.h1{
+    text-align: center;
+}
+.corner-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            position: fixed; /*Stays in place */
+        }
+
+        /* Positioning each box */
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.form-box {
+    width: 200px;
+    height: auto;
+    background: #b9dfe8;
+    margin: 20px;
+    padding: 25px;
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.inline {
+    margin-top: 5px;
+}
+
+.inline input {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+.y{
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.flex-box{
+    display:flex;
+}
+
+#dataTable{
+    border: 2px solid darkblue ;
+    border-radius: 10px;
+     width: 200px;
+    height: 90%;
+    background: #b9dfe8;
+    margin: 15px;
+    /* padding: 25px;  */
+    border: 2px solid blue;
+    border-radius: 12px;
+}
+header{
+    background-color: lavender;
+    border: 2px solid darkblue ;
+}
+p{
+    font-size:50px;
+    text-align: center;
+    /* justify-content: center; */
+}
+
+footer{
+   background-color: lavender;
+   border: 2px solid darkblue ;
+}
+
+aside{
+    border: 2px solid darkblue ;
+    width: 25%;
+
+}
+main{
+    border: 2px solid darkblue ;
+    width:50%;
+}
+#right{
+    float: right;
+}
+
+#layout{
+    display: flex;
+    gap: 10px;
+
+}
