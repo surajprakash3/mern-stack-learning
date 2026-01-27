@@ -1,0 +1,26 @@
+.body{
+    background-color: green;
+    text-align: center;
+}
+.box-container{
+    background-color: aqua;
+    margin-left: 350px;
+    height: 600px;
+    width: 300px;
+      padding: 30px;
+}
+.box-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 50px; */
+  
+}
+.box-b{
+    margin:0%;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    /* margin-left: 500px; */
+    
+}
