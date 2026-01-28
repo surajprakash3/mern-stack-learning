@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>User List</h2>
+<button onclick="getUsers()">Load Users</button>
+
+<ul id="list"></ul>
+
+<script>
+function getUsers() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then(res => res.json())
+        .then(users => {
+
+            let list = document.getElementById("list");
+            list.innerHTML = "";
+
+            users.forEach(user => {
+                let li = document.createElement("li");
+                li.innerText = user.name + " - " + user.email;
+                list.appendChild(li);
+            });
+        });
+}
+</script>
+
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>user List(Dummyapi)</h1>
+    <div id="status" class="loding">loding</div>
+    <div id="users"></div>
+    <script>
+      const usersContainer=document.getElementById("users");
+      const statusDiv=document.getElementById("status");
+      
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => {
+          console.log("res", res);
+          if (!res.ok) {
+            return;
+          }
+          return res.json();
+        })
+        .then((users) => {
+          displayusers(users);
+        })
+        .catch((err)=> {
+          console.log("err",err)
+
+        })
+      function displayusers(users){
+        console.log("users",users);
+        users.forEach(user =>{
+            let card=document.createElement('div');
+          card.innerHTML=`
+          <h3>${user.id}</h3>
+          <p><strong>Name </strong>${user.name}</p>
+          <h4>${user.phone}</h4>
+          `;
+          usersContainer.appendChild(card);
+        });
+      }
+    </script>
+  </body>
+</html>
+
+
