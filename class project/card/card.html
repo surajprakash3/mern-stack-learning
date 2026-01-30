@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Card Layout</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+    }
+
+    header {
+      background-color: lavender;
+      border: 2px solid darkblue;
+      font-size: 40px;
+      padding: 10px;
+      font-size: 90px;
+      text-align: center;
+    }
+    footer{
+      background-color: lavender;
+      border: 2px solid darkblue;
+     text-align: center;
+      font-size: 40px;
+      padding: 10px;
+    }
+
+    #layout {
+      display: flex;
+      gap: 10px;
+      min-height: 60vh;
+    }
+
+    aside {
+      border: 2px solid darkblue;
+      width: 25%;
+      padding: 15px;
+      font-size: 22px;
+    }
+
+    main {
+      border: 2px solid darkblue;
+      width: 100%;
+      padding: 15px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* CARD CONTAINER */
+   .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+
+    /* CARD STYLE */
+    .card {
+      background-color: rgb(143, 134, 129);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 20px;
+      font-weight: bold;
+      min-height: 60px;
+  text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+    .logo{
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        text-align: left;
+       
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpg" alt="Logo" class="logo">
+   Header
+
+
+</header>
+
+
+<div id="layout">
+  <aside>
+    <p>Home</p>
+    <p>About</p>
+    <p>Contact</p>
+  </aside>
+
+  <main>
+    <h1>Box</h1>
+
+    <!-- Cards will be added here -->
+    <div class="card-container" id="cardContainer"></div>
+  </main>
+</div>
+
+<footer>Footer</footer>
+
+<script>
+  const cardContainer = document.getElementById("cardContainer");
+
+  // Generate 35 cards
+  for (let i = 1; i <= 15; i++) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerText = `Card ${i}`;
+    cardContainer.appendChild(card);
+  }
+</script>
+
+</body>
+</html>
