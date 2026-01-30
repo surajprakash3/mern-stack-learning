@@ -33,30 +33,33 @@
 // }
 
 // export default App
-
+import Parentblock from "./Componet/Parentblock";
+import Counter from "./Counter";
 function App() {
   return (
     <div
-      style={{
-        width: "200px",
-        height: "200px",
-        border: "5px solid black",
-        backgroundColor: "grey",
-        textAlign: "center",
-        color: "black",
-        marginLeft: "200px",
-        marginTop: "-200px",
-        borderRadius: "20px",
-      }}
+      // style={{
+      //   width: "200px",
+      //   height: "200px",
+      //   border: "5px solid black",
+      //   backgroundColor: "grey",
+      //   textAlign: "center",
+      //   color: "black",
+      //   marginLeft: "200px",
+      //   marginTop: "-200px",
+      //   borderRadius: "20px",
+      // }}
     >
-      <p style={{ border: "2px solid black",
+      {/* <p style={{ border: "2px solid black",
       width:"100px",
       marginLeft:"50px",
       borderRadius:"5px",
       backgroundColor:"white" }}>Hello I am </p>
       <div>suraj prakash</div>
       <div> roll no: 42 </div>
-      <div>Email id: suraj@gamil.com</div>
+      <div>Email id: suraj@gamil.com</div> */}
+      <Parentblock/>
+      <Counter/>
     </div>
   );
 }
