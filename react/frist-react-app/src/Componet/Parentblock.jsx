@@ -15,8 +15,8 @@ function Parentblock(){
     return(
         <div style={{ textAlign:"center",marginBottom:"20px",display:"flex", gap:"20px"}}>
         <input type="Number" onChange={(e)=>setValue(e.target.value)} />
-         <Blockone val={val}/>
-        <Blocktwo val={val}/>
+         <Blockone val={Number(val)+1}/>
+        <Blocktwo val={Number(val)+2}/>
         <Blockthree val={val}/>
         <Blockfour val={val}/>
         
