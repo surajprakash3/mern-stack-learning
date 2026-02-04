@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  border:"2px solid black"
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  border-radius: 10px;
+}
+
+.movie-card {
+  padding: 15px;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+.h2{
+  background-color: aqua;
+  width: 200px;
+  margin-left: 45%;
+  border-radius: 10px;
+  border: "2px solid black";
+}

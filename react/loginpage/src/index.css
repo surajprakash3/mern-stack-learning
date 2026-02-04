@@ -1,0 +1,47 @@
+form {
+  width: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 10px;
+  text-align: center;
+  background: linear-gradient(100deg,green,rgb(117, 221, 117));
+}
+
+input, button {
+  padding: 8px;
+}
+
+button {
+  background: rgb(78, 78, 186);
+  border-radius: 10px;
+  width: 100px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+input{
+  background-color: rgb(150, 231, 231);
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+button:hover{
+  background-color: rgb(32, 120, 91);
+}
+p{
+  
+
+}
+.success{
+  background: linear-gradient(100deg,grey,blue);
+  width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+
+}
