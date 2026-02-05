@@ -1,5 +1,6 @@
 import './App.css'
-import AxiosDemo from "./component/AxiosDemo";   // 👈 IMPORTANT
+// import AxiosDemo from "./component/AxiosDemo";   // 👈 IMPORTANT
+import UseMemo from './component/UseMemo';
 
 
 
@@ -120,7 +121,7 @@ import AxiosDemo from "./component/AxiosDemo";   // 👈 IMPORTANT
 function App() {
   return (
     <div>
-      <AxiosDemo />
+      <UseMemo/>
     </div>
   );
 }
