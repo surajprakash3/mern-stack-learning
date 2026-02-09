@@ -1,14 +1,14 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import './App.css'
-import UseRef from './component/UseRef'
+// import UseRef from './component/UseRef'
 
 function App() {
 
 
   return (
    <div>
-<UseRef/>
+{/* <UseRef/> */}
    </div>
   )
 }

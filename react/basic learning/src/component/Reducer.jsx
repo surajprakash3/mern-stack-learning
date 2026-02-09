@@ -1,20 +1,20 @@
-import React, { useReducer } from 'react'
+/** @format */
 
-import ReactContext from './ReducerContext'
-import Diaplay from './Diaplay'
-import ReducerAction from './ReducerAction'
-import Control from './Control'
+import React, { useReducer } from "react";
+
+import ReactContext from "./ReducerContext";
+import Diaplay from "./Diaplay";
+import ReducerAction from "./ReducerAction";
+import Control from "./Control";
 
 const Reducer = () => {
-    const [state,dispatch] = useReducer(ReducerAction , {count:0})
-    return (
+  const [state, dispatch] = useReducer(ReducerAction, { count: 0, add: 5 });
+  return (
+    <ReactContext.Provider value={{ state, dispatch }}>
+      <Control />
+      <Diaplay />
+    </ReactContext.Provider>
+  );
+};
 
-        <ReactContext.Provider value={{state , dispatch}}>
-            <Control/>
-            <Diaplay/>
-        </ReactContext.Provider>
-
-    )
-}
-
-export default Reducer
+export default Reducer;
