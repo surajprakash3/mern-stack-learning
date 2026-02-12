@@ -1,49 +1,77 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 export default function Register() {
-  const [user, setUser] = useState([{ name: "", email: "", password: "" }]);
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   const navigate = useNavigate();
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmitForm = (e) => {
-    e.preventDefault;
-    localStorage.setItem("userData", JSON.stringify(users));
-    navigate("/");
+    e.preventDefault(); // ✅ stop refresh
+
+    localStorage.setItem("userData", JSON.stringify(user));
+
+    navigate("/login"); // go to login page
   };
 
   return (
-    <div>
-      <div>Register</div>
-      <div>
-        <form onSubmit={handleSubmitForm}>
-          <div>
-            <label>
-              Name
-              <input
-                type="text"
-                onChange={(e) => setName({ ...users, name: e.target.value })}
-              />
-            </label>
-            <label>
-              Email
-              <input
-                type="email"
-                onChange={(e) => setEmail({ ...users, email: e.target.value })}
-              />
-            </label>
-            <label>
-              password
-              <input
-                type="text"
-                onChange={(e) =>
-                  setPassword({ ...users, password: e.target.value })
-                }
-              />
-            </label>
-          </div>
-          <div o>Submit</div>
-        </form>
-      </div>
+    <div className="bg-red-300">
+      <h2>Register</h2>
+
+      <form onSubmit={handleSubmitForm}>
+        <label htmlFor="name">
+          Name
+          <input
+            id="name"
+            name="name"
+            type="text"
+            value={user.name}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <br />
+
+        <label htmlFor="email">
+          Email
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={user.email}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <br />
+
+        <label htmlFor="password">
+          Password
+          <input
+            id="password"
+            name="password"
+            type="password"
+            value={user.password}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
